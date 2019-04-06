@@ -1,0 +1,106 @@
+#-------------------------------------------------------------------------------
+# Brno University of Technology, Department of Radio Electronics
+#-------------------------------------------------------------------------------
+# Author(s): Tomas Dubina, Milan Hornik, Tomas Fryza (tomas.fryza@vut.cz), Xilinx
+# Date: 2019-04-06 17:17:25
+# Board: CoolRunner-II CPLD starter board
+# Description: Constraints file with pin assignments.
+#-------------------------------------------------------------------------------
+# Buttons & switches
+#-------------------------------------------------------------------------------
+# Sixteen shared push buttons and slide switches
+#  0  ...  7       8  ... 15
+# +-+     +-+     +-+     +-+
+# | | ... | |     | | ... | | H
+# |.|     |.|     |.|     |.| L
+# +-+     +-+     +-+     +-+
+#
+#  0   4   8   12
+#  o   o   o   o   H: pressed
+#  o   o   o   o   L: released
+#  o   o   o   o
+#  o   o   o   o
+#  3   7   11  15
+NET number_a_i<0>        LOC = P9;
+NET number_a_i<1>        LOC = P10;
+NET number_a_i<2>        LOC = P6;
+NET number_a_i<3>        LOC = P7;
+NET number_b_i<0>        LOC = P4;
+NET number_b_i<1>        LOC = P5;
+NET number_b_i<2>        LOC = P2;
+NET number_b_i<3>        LOC = P3;
+NET control_sig_i<0>     LOC = P140;
+NET control_sig_i<1>     LOC = P142;
+NET control_sig_i<2>     LOC = P138;
+NET control_sig_i<3>     LOC = P139;
+#NET cpld_sw_i<12>       LOC = P135;
+#NET cpld_sw_i<13>       LOC = P136;
+#NET cpld_sw_i<14>       LOC = P133;
+#NET cpld_sw_i<15>       LOC = P134;
+
+#-------------------------------------------------------------------------------
+# Sixteen discrete LEDs
+#-------------------------------------------------------------------------------
+#  0 ... 3   4 ... 7
+#  * * * *   * * * *   H: turn LED on
+#  * * * *   * * * *   L: turn LED off
+#  8 ... 9  10 ... 15
+NET number_a_o<0>       LOC = P118;
+NET number_a_o<1>       LOC = P119;
+NET number_a_o<2>       LOC = P116;
+NET number_a_o<3>       LOC = P117;
+NET number_b_o<0>       LOC = P114;
+NET number_b_o<1>       LOC = P115;
+NET number_b_o<2>       LOC = P112;
+NET number_b_o<3>       LOC = P113;
+NET control_sig_o<0>      LOC = P103;
+NET control_sig_o<1>      LOC = P104;
+NET control_sig_o<2>      LOC = P101;
+NET control_sig_o<3>      LOC = P102;
+#NET cpld_led_o<12>      LOC = P98;
+#NET cpld_led_o<13>      LOC = P100;
+#NET cpld_led_o<14>      LOC = P96;
+#NET cpld_led_o<15>      LOC = P97;
+
+#-------------------------------------------------------------------------------
+# Buttons & switches
+#-------------------------------------------------------------------------------
+# Two push buttons
+#NET btn_i<1>            LOC = P94;
+#NET btn_i<0>            LOC = P143;
+
+# Two slide switches
+#NET sw_i<1>             LOC = P124;
+#NET sw_i<0>             LOC = P39;
+
+#-------------------------------------------------------------------------------
+# Clock
+#-------------------------------------------------------------------------------
+NET clk_i               LOC = P38;
+
+#-------------------------------------------------------------------------------
+# Four discrete LEDs
+#-------------------------------------------------------------------------------
+#NET led_o<3>            LOC = P64;
+#NET led_o<2>            LOC = P66;
+NET carry_o            LOC = P68;
+NET parity_o           LOC = P69;
+
+#-------------------------------------------------------------------------------
+# Four-digit time-multiplexed seven-segment LED display
+#-------------------------------------------------------------------------------
+# Digit enable
+NET disp_digit_o<3>     LOC = P130;
+NET disp_digit_o<2>     LOC = P129;
+NET disp_digit_o<1>     LOC = P128;
+NET disp_digit_o<0>     LOC = P126;
+
+# Seven-segment LED segments
+#NET sseg_o<7>      LOC = P59;     # decimal point
+NET disp_sseg_o<6>      LOC = P56;     # segment a
+NET disp_sseg_o<5>      LOC = P53;     # segment b
+NET disp_sseg_o<4>      LOC = P60;     # segment c
+NET disp_sseg_o<3>      LOC = P58;     # segment d
+NET disp_sseg_o<2>      LOC = P57;     # segment e
+NET disp_sseg_o<1>      LOC = P54;     # segment f
+NET disp_sseg_o<0>      LOC = P61;     # segment g
