@@ -45,7 +45,9 @@ end alu_top;
 architecture Behavioral of alu_top is
     constant C_NBIT : natural := 7; -- number of bits for clock prescaler
     signal alu_result : std_logic_vector(3 downto 0);  -- Po vyberu operace
-    signal rs_carry, rs_plus_c, rs_minus_c : std_logic;                     -- Carry bit
+    signal rs_carry, rs_plus_c, rs_minus_c : std_logic;               -- Carry bit
+    signal rs_inc_c, rs_dec_c, rs_plusc_c, rs_minusc_c : std_logic;   -- Carry bit
+    signal rs_rr_c, rs_rl_c, rs_rrc_c, rs_rlc_c, rs_mul_c : std_logic;-- Carry bit
     signal rs_plus : std_logic_vector(3 downto 0);   -- Y = A + B        0x0
     signal rs_minus : std_logic_vector(3 downto 0);  -- Y = A - B        0x1
     signal rs_inc : std_logic_vector(3 downto 0);    -- Y = A + 1        0x2
@@ -92,6 +94,7 @@ begin
         parity_o => parity_o
     );
     
+    -- Prepis carry na vystup 
     carry_o <= not rs_carry;
     
     -- scitacka
@@ -105,6 +108,15 @@ begin
         Y_o => rs_plus,
         C_o => rs_plus_c
     );
+    
+    -- logicka negace
+    RS_NOT_COM: entity work.negation
+    port map (
+        -- vstup
+        A_i => number_a_i,
+        -- vystup
+        Y_o => rs_not
+    );    
     
     -- Mux , vyber z vysledku z operace
     with control_sig_i select
@@ -130,7 +142,15 @@ begin
      with control_sig_i select
          rs_carry <= rs_plus_c when x"0",
                      rs_minus_c when x"1",
+                     rs_inc_c when x"2",
+                     rs_dec_c when x"3",
+                     rs_plusc_c when x"4",
+                     rs_minusc_c when x"5",
+                     rs_rr_c when x"A",
+                     rs_rl_c when x"B",
+                     rs_rrc_c when x"C",
+                     rs_rlc_c when x"D",
+                     rs_mul_c when x"F",
                      '0' when others;                
 
 end Behavioral;
-
