@@ -140,6 +140,16 @@ begin
         Y_o => rs_and
     );
     
+    -- logicky exkluzivni soucet
+    RS_XOR_COM: entity work.exdisjunction
+    port map (
+        -- vstup
+        A_i => number_a_i,
+        B_i => number_b_i,
+        -- vystup
+        Y_o => rs_xor   
+    );
+    
     -- logicka negace
     RS_NOT_COM: entity work.negation
     port map (
