@@ -119,6 +119,16 @@ begin
         C_o => rs_inc_c
     );
     
+    -- logicky soucin
+    RS_AND_COM: entity work.conjunction
+    port map (
+        -- vstup
+        A_i => number_a_i,
+        B_i => number_b_i,
+        -- vystup
+        Y_o => rs_and
+    );
+    
     -- logicka negace
     RS_NOT_COM: entity work.negation
     port map (
