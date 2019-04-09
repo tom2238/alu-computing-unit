@@ -132,6 +132,17 @@ begin
         C_o => rs_inc_c
     );
     
+    -- dekrementace
+    RS_DEC_COM: entity work.decrement
+    port map (
+        -- vstup
+        A_i => number_a_i,
+        C_i => '0',
+        -- vystup
+        Y_o => rs_dec,
+        C_o => rs_dec_c
+    );
+    
     -- logicky soucet
     RS_OR_COM: entity work.disjunction
     port map (
