@@ -109,6 +109,19 @@ begin
         C_o => rs_plus_c
     );
     
+    -- odcitacka
+    RS_MINUS_COM: entity work.substraction
+    port map (
+        -- vstup
+        A_i => number_a_i,
+        B_i => number_b_i,
+        c_i => '0',
+        -- vystup
+        Y_o => rs_minus,
+        c_o => rs_minus_c
+    );
+    
+    -- inkrementace
     RS_INC_COM: entity work.increment
     port map (
         -- Vstup
