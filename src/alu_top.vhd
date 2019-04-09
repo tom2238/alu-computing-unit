@@ -109,6 +109,16 @@ begin
         C_o => rs_plus_c
     );
     
+    RS_INC_COM: entity work.increment
+    port map (
+        -- Vstup
+        A_i => number_a_i,
+        C_i => '0',
+        -- Vystup
+        Y_o => rs_inc,
+        C_o => rs_inc_c
+    );
+    
     -- logicka negace
     RS_NOT_COM: entity work.negation
     port map (
