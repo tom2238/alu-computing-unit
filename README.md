@@ -7,7 +7,7 @@
 ## Řídící signály ALU
 
 <table>
-<tr><td>**Řídící signál**</td><td>**Funkce**</td><td>**Popis**</td></tr>
+<tr><td><b>Řídící signál</b></td><td><b>Funkce</b></td><td><b>Popis</b></td></tr>
 <tr><td> 0x0 </td><td> Y = A + B </td><td> Součet </td></tr>
 <tr><td> 0x1 </td><td> Y = A - B </td><td> Rozdíl </td></tr>
 <tr><td> 0x2 </td><td> Y = A + 1 </td><td> Inkrementace </td></tr>
