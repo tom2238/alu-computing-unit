@@ -40,13 +40,13 @@ begin
 
 
 HA0: entity work.negation
-	  port map(A_i, sig_1);
+	  port map(B_i, sig_1);
 
 HA1: entity work.four_adder
 	  port map(sig_1,"0001",'0',sig_2,sig_3(0));
 
 HA2: entity work.four_adder
-	  port map(sig_2,B_i,'0',Y_o,sig_3(1));
+	  port map(sig_2,A_i,'0',Y_o,sig_3(1));
 	  
 c_o <= sig_3(0) nor sig_3(1);
 	  
