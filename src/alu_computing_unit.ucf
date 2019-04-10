@@ -57,10 +57,10 @@ NET control_sig_o<0>      LOC = P103;
 NET control_sig_o<1>      LOC = P104;
 NET control_sig_o<2>      LOC = P101;
 NET control_sig_o<3>      LOC = P102;
-#NET cpld_led_o<12>      LOC = P98;
-#NET cpld_led_o<13>      LOC = P100;
-#NET cpld_led_o<14>      LOC = P96;
-#NET cpld_led_o<15>      LOC = P97;
+NET alu_result_o<0>      LOC = P98;
+NET alu_result_o<1>      LOC = P100;
+NET alu_result_o<2>      LOC = P96;
+NET alu_result_o<3>      LOC = P97;
 
 #-------------------------------------------------------------------------------
 # Buttons & switches
@@ -71,7 +71,7 @@ NET control_sig_o<3>      LOC = P102;
 
 # Two slide switches
 #NET sw_i<1>             LOC = P124;
-#NET sw_i<0>             LOC = P39;
+NET carry_i               LOC = P39;
 
 #-------------------------------------------------------------------------------
 # Clock
@@ -82,7 +82,7 @@ NET clk_i               LOC = P38;
 # Four discrete LEDs
 #-------------------------------------------------------------------------------
 #NET led_o<3>            LOC = P64;
-#NET led_o<2>            LOC = P66;
+NET carry_in_o           LOC = P66;
 NET carry_o            LOC = P68;
 NET parity_o           LOC = P69;
 

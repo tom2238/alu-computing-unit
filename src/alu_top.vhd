@@ -24,16 +24,19 @@ entity alu_top is
         number_a_i : in std_logic_vector(3 downto 0);     -- number A switch channel
         number_b_i : in std_logic_vector(3 downto 0);     -- number B switch channel
         control_sig_i : in std_logic_vector(3 downto 0);  -- control signal switch channel
-
+        carry_i : in std_logic;                           -- User carry input
+        
         -- Global input signals at Coolrunner-II board
         clk_i : in std_logic;                             -- use jumpers and select 10 kHz clock
 
         -- Global output signals at Coolrunner-II board
-        carry_o : out std_logic;                          -- carry flag
+        carry_o : out std_logic;                          -- carry out flag
+        carry_in_o : out std_logic;                       -- carry in flag
         parity_o : out std_logic;                         -- parity flag
         number_a_o : out std_logic_vector(3 downto 0);    -- number A LED channel
         number_b_o : out std_logic_vector(3 downto 0);    -- number B LED channel
         control_sig_o : out std_logic_vector(3 downto 0); -- control signal LED channel 
+        alu_result_o : out std_logic_vector(3 downto 0);  -- alu result LED channel
         disp_digit_o : out std_logic_vector(3 downto 0);  -- 7-segment digit
         disp_sseg_o  : out std_logic_vector(6 downto 0)   -- 7-segment data
     );
@@ -66,9 +69,16 @@ architecture Behavioral of alu_top is
     signal rs_mul : std_logic_vector(3 downto 0);    -- Y = A * B        0xF
     
 begin
+    -- LED number A
     number_a_o <= number_a_i;
+    -- LED number B
     number_b_o <= number_b_i;
+    -- LED control
     control_sig_o <= control_sig_i;
+    -- LED result
+    alu_result_o <= alu_result;
+    -- Input carry LED
+    carry_in_o <= carry_i;
     
     DISP_MUX: entity work.disp_mux
     generic map (
@@ -141,6 +151,30 @@ begin
         -- vystup
         Y_o => rs_dec,
         C_o => rs_dec_c
+    );
+    
+    -- soucet s prenosem
+    RS_PLUSC_COM: entity work.adder_with_carry
+    port map (
+        -- vstup
+        A_i => number_a_i,
+        B_i => number_b_i,
+        C_i => carry_i,
+        -- vystup
+        Y_o => rs_plusc,
+        C_o => rs_plusc_c
+    );
+    
+    -- rozdil s prenosem
+    RS_MINUSC_COM: entity work.substraction_with_carry
+    port map (
+        -- vstup
+        A_i => number_a_i,
+        B_i => number_b_i,
+        C_i => carry_i,
+        -- vystup
+        Y_o => rs_minusc,
+        C_o => rs_minusc_c
     );
     
     -- logicky soucet
