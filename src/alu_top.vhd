@@ -217,6 +217,70 @@ begin
         Y_o => rs_not
     );    
     
+    -- Rotace vpravo
+    RS_RR_COM: entity work.rotate_right
+    port map (
+       -- vstup
+       A_i => number_a_i,
+       C_i => carry_i,
+       -- vystup
+       Y_o => rs_rr,
+       C_o => rs_rr_c
+    );
+    
+    -- Rotace vlevo
+    RS_RL_COM: entity work.rotate_left
+    port map (
+       -- vstup
+       A_i => number_a_i,
+       C_i => carry_i,
+       -- vystup
+       Y_o => rs_rl,
+       C_o => rs_rl_c
+    );
+    
+    -- Rotace vpravo s prenosem
+    RS_RRC_COM: entity work.rotate_right_with_carry
+    port map (
+       -- vstup
+       A_i => number_a_i,
+       C_i => carry_i,
+       -- vystup
+       Y_o => rs_rrc,
+       C_o => rs_rrc_c
+    );
+    
+    -- Rotace vlevo s prenosem
+    RS_RLC_COM: entity work.rotate_left_with_carry
+    port map (
+       -- vstup
+       A_i => number_a_i,
+       C_i => carry_i,
+       -- vystup
+       Y_o => rs_rlc,
+       C_o => rs_rlc_c
+    );
+    
+    -- Prehozeni bitu
+    RS_SWAP_COM: entity work.bitswap
+    port map (
+       -- vstup
+       A_i => number_a_i,
+       -- vystup
+       Y_o => rs_swap
+    );   
+    
+    -- Nasobeni
+    RS_MUL_COM: entity work.multiply
+    port map (
+       -- vstup
+       A_i => number_a_i,
+       B_i => number_b_i,
+       -- vystup
+       Y_o => rs_mul,
+       C_o => rs_mul_c
+    );
+    
     -- Mux , vyber z vysledku z operace
     with control_sig_i select
         alu_result <= rs_plus when x"0",
