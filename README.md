@@ -28,4 +28,4 @@
 
 # Funkční bloky
 ### Sčítačka s přenosem
-![Alt text](./doc/adder_with_carry.svg)
+![Sčítačka s přenosem](./doc/adder_with_carry.svg?s=50)
