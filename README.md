@@ -27,5 +27,35 @@
 </table>
 
 # Funkční bloky
-### Sčítačka s přenosem
-![Sčítačka s přenosem](./doc/adder_with_carry.svg?s=50)
+- #### Sčítačka 
+<img src="./doc/four_adder.svg" height="240">
+
+- #### Odčítačka
+<img src="./doc/substraction.svg" height="235">
+
+- #### Inkrementace 
+<img src="./doc/increment.svg" height="205">
+
+- #### Dekrementace 
+<img src="./doc/decrement.svg" height="210">
+
+- #### Sčítačka s přenosem
+<img src="./doc/adder_with_carry.svg" height="250">
+
+- #### Odčítačka s přenosem
+<img src="./doc/substraction_with_carry.svg" height="240">
+
+- #### Logický součet 
+- #### Logický součin 
+- #### Exkluzivní logický součet 
+- #### Logická negace 
+- #### Rotace vpravo 
+- #### Rotace vlevo 
+- #### Rotace vpravo s přenosem 
+- #### Rotace vlevo s přenosem 
+- #### Přehození bitů
+- #### Násobička
+- #### Jednotka ovládání displeje
+- #### Parita výsledku
+
+
