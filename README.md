@@ -46,16 +46,43 @@
 <img src="./doc/substraction_with_carry.svg" height="240">
 
 - #### Logický součet 
+<img src="./doc/disjunction.svg" height="205">
+
 - #### Logický součin 
+<img src="./doc/conjunction.svg" height="205">
+
 - #### Exkluzivní logický součet 
+<img src="./doc/exdisjunction.svg" height="205">
+
 - #### Logická negace 
+<img src="./doc/negation.svg" height="170">
+
 - #### Rotace vpravo 
+<img src="./doc/rotate_right.svg" height="205">
+
 - #### Rotace vlevo 
+<img src="./doc/rotate_left.svg" height="210">
+
 - #### Rotace vpravo s přenosem 
+<img src="./doc/rotate_right_with_carry.svg"  height="210">
+
 - #### Rotace vlevo s přenosem 
+<img src="./doc/rotate_left_with_carry.svg"  height="210">
+
 - #### Přehození bitů
+<img src="./doc/bitswap.svg"  height="170">
+
 - #### Násobička
-- #### Jednotka ovládání displeje
+<img src="./doc/multiply.svg"  height="220">
+
 - #### Parita výsledku
+<img src="./doc/parity.svg"  height="170">
 
+- #### Jednotka ovládání displeje
+<img src="./doc/disp_mux.svg"  height="360">
 
+- #### Výsledná ALU jednotka
+<img src="./doc/alu_unit.svg"  height="500">
+
+## RTL schéma jednotky
+<a href="./doc/alu_schematic.pdf"><img src="./doc/alu_schematic.svg"  height="300"></a>
