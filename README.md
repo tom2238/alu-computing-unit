@@ -26,3 +26,6 @@
 <tr><td> 0xF </td><td> Y = A mul B </td><td> Součin </td></tr>
 </table>
 
+# Funkční bloky
+### Sčítačka s přenosem
+![Alt text](./doc/adder_with_carry.svg)
