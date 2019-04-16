@@ -1,7 +1,5 @@
 # ALU computing unit
 
-[TOC]
-
 ## Popis
 
 4-bitová aritmeticko-logická jednotka se dvěma vstupy A a B a výstupem Y s přenosem C. Jednotka může provádět 16 různých operací (viz tabulka).
