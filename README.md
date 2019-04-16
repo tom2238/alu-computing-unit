@@ -1,5 +1,7 @@
 # ALU computing unit
 
+[TOC]
+
 ## Popis
 
 4-bitová aritmeticko-logická jednotka se dvěma vstupy A a B a výstupem Y s přenosem C. Jednotka může provádět 16 různých operací (viz tabulka).
@@ -26,7 +28,8 @@
 <tr><td> 0xF </td><td> Y = A mul B </td><td> Součin </td></tr>
 </table>
 
-# Funkční bloky
+## Funkční bloky
+
 - #### Sčítačka 
 <img src="./doc/four_adder.svg" height="240">
 
@@ -85,4 +88,4 @@
 <img src="./doc/alu_unit.svg"  height="500">
 
 ## RTL schéma jednotky
-<a href="./doc/alu_schematic.pdf"><img src="./doc/alu_schematic.svg"  height="300"></a>
+<a href="./doc/alu_schematic.pdf"><img src="./doc/alu_schematic.svg"  height="500"></a>
