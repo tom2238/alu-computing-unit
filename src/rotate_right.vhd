@@ -35,7 +35,11 @@ architecture Behavioral of rotate_right is
     
 begin
 
-
+Y_o(0) <= A_i(1);
+Y_o(1) <= A_i(2);
+Y_o(2) <= A_i(3);
+Y_o(3) <= A_i(0);
+c_o	 <= A_i(0);
 
  
 end Behavioral;

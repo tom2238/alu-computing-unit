@@ -2,8 +2,8 @@
 -- Brno University of Technology, Department of Radio Electronics
 --------------------------------------------------------------------------------
 -- Author: Milan hornik
--- Design: rotate_left
--- Description: Implementation of <<
+-- Design: rotate_right
+-- Description: Implementation of >>
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
@@ -29,13 +29,17 @@ entity rotate_left is
 end rotate_left;
 
 --------------------------------------------------------------------------------
--- Architecture declaration for rotate_right
+-- Architecture declaration for rotate_left
 --------------------------------------------------------------------------------
 architecture Behavioral of rotate_left is
     
 begin
 
-
+Y_o(0) <= A_i(3);
+Y_o(1) <= A_i(0);
+Y_o(2) <= A_i(1);
+Y_o(3) <= A_i(2);
+c_o	 <= A_i(3);
 
  
 end Behavioral;

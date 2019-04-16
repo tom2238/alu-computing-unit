@@ -35,7 +35,11 @@ architecture Behavioral of rotate_left_with_carry is
     
 begin
 
-
+Y_o(0) <= c_i;
+Y_o(1) <= A_i(0);
+Y_o(2) <= A_i(1);
+Y_o(3) <= A_i(2);
+c_o	 <= A_i(3);
 
  
 end Behavioral;

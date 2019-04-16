@@ -222,7 +222,7 @@ begin
     port map (
        -- vstup
        A_i => number_a_i,
-       C_i => carry_i,
+       C_i => '0',
        -- vystup
        Y_o => rs_rr,
        C_o => rs_rr_c
@@ -233,7 +233,7 @@ begin
     port map (
        -- vstup
        A_i => number_a_i,
-       C_i => carry_i,
+       C_i => '0',
        -- vystup
        Y_o => rs_rl,
        C_o => rs_rl_c
