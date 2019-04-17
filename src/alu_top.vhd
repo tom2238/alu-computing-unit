@@ -1,15 +1,13 @@
 --------------------------------------------------------------------------------
 -- Brno University of Technology, Department of Radio Electronics
 --------------------------------------------------------------------------------
--- Author: Tomas Dubina, Milan Hornik, Tomas Fryza (tomas.fryza@vut.cz)
+-- Author: Tomas Dubina, Milan Hornik
 -- Date: 2019-04-06 17:25
 -- Design: alu_top
--- Description: 
+-- Description: 4-bit ALU with 16 operations
 --------------------------------------------------------------------------------
 -- TODO:
---
 -- NOTE: 
---
 --------------------------------------------------------------------------------
 
 library ieee;
@@ -47,7 +45,7 @@ end alu_top;
 --------------------------------------------------------------------------------
 architecture Behavioral of alu_top is
     constant C_NBIT : natural := 7; -- number of bits for clock prescaler
-    signal alu_result : std_logic_vector(3 downto 0);  -- Po vyberu operace
+    signal alu_result : std_logic_vector(3 downto 0);  -- vysledek po vyberu operace
     signal rs_carry, rs_plus_c, rs_minus_c : std_logic;               -- Carry bit
     signal rs_inc_c, rs_dec_c, rs_plusc_c, rs_minusc_c : std_logic;   -- Carry bit
     signal rs_rr_c, rs_rl_c, rs_rrc_c, rs_rlc_c, rs_mul_c : std_logic;-- Carry bit
@@ -78,34 +76,35 @@ begin
     -- LED result
     alu_result_o <= alu_result;
     -- Input carry LED
-    carry_in_o <= carry_i;
+    carry_in_o <=  not (carry_i);
+    -- Prepis carry na vystup 
+    carry_o <= not rs_carry;
     
+    -- ovladac dipleje
     DISP_MUX: entity work.disp_mux
     generic map (
        C_NBIT => C_NBIT                  -- N_bit binary counter
     )
     port map (
        -- Entity input signals
-       data3_i => "0000",
-       data2_i => number_a_i,
-       data1_i => number_b_i,
-       data0_i => alu_result,
+       data3_i => control_sig_i, -- Operace
+       data2_i => number_a_i,    -- A cislo
+       data1_i => number_b_i,    -- B cislo
+       data0_i => alu_result,    -- vysledek
        clk_i =>  clk_i,
        -- Entity output signals
        an_o  => disp_digit_o,    -- 1-of-4 decoder
        sseg_o => disp_sseg_o     -- 7-segment display
     );
     
+    -- parita vysledku
     PARITY: entity work.parity
     port map (
         -- vstup dat z alu
         data_i => alu_result,
         -- vysledna parita vysledku
         parity_o => parity_o
-    );
-    
-    -- Prepis carry na vystup 
-    carry_o <= not rs_carry;
+    ); 
     
     -- scitacka
     RS_PLUS_COM: entity work.four_adder

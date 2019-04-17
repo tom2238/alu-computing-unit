@@ -1,16 +1,11 @@
 --------------------------------------------------------------------------------
 -- Brno University of Technology, Department of Radio Electronics
 --------------------------------------------------------------------------------
--- Author: Tomas Fryza (tomas.fryza@vut.cz)
+-- Author: Tomas Dubina, Milan Hornik
 -- Date: 2019-03-14 08:04
 -- Design: disp_mux
 -- Description: 7-segment display time-multiplexing module.
 --------------------------------------------------------------------------------
--- TODO: Complete internal stucture of display multiplexer.
---
--- NOTE: Copy "bin_cnt.vhd", "four_to_one_mux.vhd", "hex_to_sseg.vhd",
---       and "one_of_four.vhd" files from previous lab(s) to current
---       working folder.
 --------------------------------------------------------------------------------
 
 library ieee;
@@ -41,13 +36,11 @@ end disp_mux;
 -- Architecture declaration for display multiplexer
 --------------------------------------------------------------------------------
 architecture Behavioral of disp_mux is
-   -- constant c_NBIT : integer := 7; -- number of bits for clock multiplexer
     constant g_NBIT : integer := 4; -- number of bits for clock multiplexer
-    signal s_clk_mux : std_logic_vector(c_NBIT-1 downto 0);
+    signal s_clk_mux : std_logic_vector(c_NBIT-1 downto 0); -- vystup delicky
     signal s_hex : std_logic_vector(4-1 downto 0);  -- internal 4-bit data
 begin
-    -- sub-block of binary counter (display multiplexing)
-    -- WRITE YOUR CODE HERE
+    -- binarni delicka kmitoctu
     BINCNT : entity work.bin_cnt
       generic map (
             N_BIT => c_NBIT                 -- N_bit binary counter
@@ -58,9 +51,10 @@ begin
             bin_cnt_o => s_clk_mux          -- output bits
       );
       
+      -- mux 
       FOUR_TO_ONE : entity work.four_to_one_mux
       generic map (
-            g_NBIT => g_NBIT                 -- N_bit binary counter
+            g_NBIT => g_NBIT                 -- g_nbit multiplexer
       )
       port map (
         data3_i => data3_i,  -- last N_BIT channel
@@ -72,13 +66,8 @@ begin
         -- Entity output signals
         y_o => s_hex 
       );  
-    -- sub-block of 4-bit 4-to-1 multiplexer
---    s_hex <= data0_i when (s_clk_mux(c_NBIT-1 downto c_NBIT-2) = "00") else
---             data1_i when (s_clk_mux(c_NBIT-1 downto c_NBIT-2) = "01") else
---             data2_i when (s_clk_mux(c_NBIT-1 downto c_NBIT-2) = "10") else
---             data3_i;
-
-    -- sub-block of hex_to_sseg entity
+ 
+      -- NUM -> BCD
     HEX2SSEG : entity work.hex_to_sseg
         port map (
             hex_i => s_hex,     -- 4-bit data to decode

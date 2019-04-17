@@ -32,6 +32,6 @@ architecture Behavioral of exdisjunction is
 
 begin
 
-Y_o <= (A_i) xor (B_i);
+Y_o <= (A_i) xor (B_i); -- exkluzivni soucet po bitech
 
 end Behavioral;

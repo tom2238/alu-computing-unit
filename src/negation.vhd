@@ -32,6 +32,6 @@ architecture Behavioral of negation is
 
 begin
 
-Y_o <= not(A_i);
+Y_o <= not(A_i);                        -- NEGACE
 
 end Behavioral;

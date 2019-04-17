@@ -6,14 +6,13 @@
 -- Design: disjunction
 -- Description: OR operation, Y = A or B
 --------------------------------------------------------------------------------
--- TODO: 
 --------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
 
 --------------------------------------------------------------------------------
--- Entity declaration for negation
+-- Entity declaration for disjunction
 --------------------------------------------------------------------------------
 entity disjunction is
     port(
@@ -32,6 +31,6 @@ architecture Behavioral of disjunction is
 
 begin
 
-Y_o <= (A_i) or (B_i);
+Y_o <= (A_i) or (B_i); -- logicky soucet po bitech
 
 end Behavioral;

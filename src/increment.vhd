@@ -6,14 +6,13 @@
 -- Design: increment A value
 -- Description: INC operation, Y = A + 1
 --------------------------------------------------------------------------------
--- TODO: 
 --------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
 
 --------------------------------------------------------------------------------
--- Entity declaration for negation
+-- Entity declaration for increment
 --------------------------------------------------------------------------------
 entity increment is
     port(
@@ -27,7 +26,7 @@ entity increment is
 end increment;
 
 --------------------------------------------------------------------------------
--- Architecture declaration for negation
+-- Architecture declaration for increment
 --------------------------------------------------------------------------------     
 architecture Behavioral of increment is
 
@@ -38,7 +37,7 @@ begin
     port map (
         -- vstup
         A_i => A_i,
-        B_i => "0001",
+        B_i => "0001", -- pricte 1 k signalu A_i
         C_i => C_i,
         -- vystup
         Y_o => Y_o,

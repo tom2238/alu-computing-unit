@@ -32,7 +32,7 @@ architecture Behavioral of bitswap is
 
 begin
 
-Y_o(3 downto 2) <= A_i(1 downto 0);
-Y_o(1 downto 0) <= A_i(3 downto 2);
+Y_o(3 downto 2) <= A_i(1 downto 0); -- posunuti o dve pozice vlevo
+Y_o(1 downto 0) <= A_i(3 downto 2); -- posunuti o dve pozice vpravo
 
 end Behavioral;

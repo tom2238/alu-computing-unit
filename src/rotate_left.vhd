@@ -15,13 +15,13 @@ use ieee.std_logic_1164.all;
 --------------------------------------------------------------------------------
 entity rotate_left is
     port(
-        -- Global input signals at CPLD expansion board
+        -- Input
 		  
 		  A_i : in std_logic_vector(4-1 downto 0);
 		  C_i : in std_logic;
 			
 
-        -- Global output signals at Coolrunner-II board
+        -- Output
 
 		  Y_o : out std_logic_vector(4-1 downto 0) ;
 		  C_o : out std_logic
@@ -35,11 +35,11 @@ architecture Behavioral of rotate_left is
     
 begin
 
-Y_o(0) <= A_i(3);
-Y_o(1) <= A_i(0);
-Y_o(2) <= A_i(1);
-Y_o(3) <= A_i(2);
-c_o	 <= A_i(3);
+Y_o(0) <= A_i(3);           -- nejvyssi bit je presunut na nejnizsi  bit vystupu
+Y_o(1) <= A_i(0);           -- posun o jeden bit v levo
+Y_o(2) <= A_i(1);           -- posun o jeden bit v levo
+Y_o(3) <= A_i(2);           -- posun o jeden bit v levo
+c_o	 <= A_i(3);             -- na c_o je zapsan nejvyssi bit vstupu
 
  
 end Behavioral;

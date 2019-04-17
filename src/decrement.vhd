@@ -6,7 +6,6 @@
 -- Design: decrement A value
 -- Description: DEC operation, Y = A - 1
 --------------------------------------------------------------------------------
--- TODO: 
 --------------------------------------------------------------------------------
 
 library ieee;
@@ -38,7 +37,7 @@ begin
     port map (
         -- vstup
         A_i => A_i,
-        B_i => "0001",
+        B_i => "0001", -- odecte 1 od signalu A_i
         C_i => C_i,
         -- vystup
         Y_o => Y_o,

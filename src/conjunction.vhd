@@ -6,14 +6,13 @@
 -- Design: conjunction
 -- Description: AND operation, Y = A and B
 --------------------------------------------------------------------------------
--- TODO: 
 --------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
 
 --------------------------------------------------------------------------------
--- Entity declaration for negation
+-- Entity declaration for conjunction
 --------------------------------------------------------------------------------
 entity conjunction is
     port(
@@ -26,12 +25,12 @@ entity conjunction is
 end conjunction;
 
 --------------------------------------------------------------------------------
--- Architecture declaration for negation
+-- Architecture declaration for conjunction
 --------------------------------------------------------------------------------     
 architecture Behavioral of conjunction is
 
 begin
 
-Y_o <= (A_i) and (B_i);
+Y_o <= (A_i) and (B_i);  -- logicky soucin po bitech
 
 end Behavioral;
