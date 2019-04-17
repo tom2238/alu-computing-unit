@@ -29,7 +29,10 @@
 ## Funkční bloky
 
 - #### Sčítačka 
-<img src="./doc/four_adder.svg" height="240">
+<table><tr>
+<td><img src="./doc/four_adder.svg" height="240"></td>
+<td>Numericky sečte čísla na vstupech A, B a výsledek uloží do Y. Příznak přenosu je uložen do C. Vstupní příznak C je ignorován.</td>
+</tr><table>
 
 - #### Odčítačka
 <img src="./doc/substraction.svg" height="235">
