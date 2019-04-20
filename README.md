@@ -2,7 +2,8 @@
 
 ## Popis
 
-4-bitová aritmeticko-logická jednotka se dvěma vstupy A a B a výstupem Y s přenosem C. Jednotka může provádět 16 různých operací (viz tabulka).
+<p>4-bitová aritmeticko-logická jednotka se dvěma vstupy A a B a výstupem Y s přenosem C. Jednotka může provádět 16 různých operací (viz tabulka). </p><p>Jednotce lze ručně nastavit vstupní příznak carry, který je u některých operací použit. Výsledná data (včetně vstupů) jsou zobrazena na šestnácti LED diodách a také na čtyřmístném sedmisegmentovém displeji. Všechny vstupní hodnoty se nastavují pomocí přepínačů.</p><p> Vývoj probíhal na vývojové desce CoolRunner-II od firmy Digilent.
+<center><img src="./doc/cr2-2.png" height="400"></center><center>CoolRunner-II Starter Board [1]</center>
 
 ## Řídící signály ALU
 
@@ -136,3 +137,6 @@ Výstupy disp_digit a disp_sseg slouží k dekadickému zobrazení hodnot na 7se
 <td><a href="./doc/alu_schematic.pdf"><img src="./doc/alu_schematic.svg"  height="500"></a></td>
 <td><a href="./doc/alu_schematic_expand.pdf"><img src="./doc/alu_schematic_expand.svg"  height="500"></a></td>
 </tr></table>
+
+### Zdroje
+1. https://reference.digilentinc.com/_media/reference/programmable-logic/coolrunner-ii/cr2-2.png
