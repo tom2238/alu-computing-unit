@@ -28,120 +28,106 @@
 
 ## Funkční bloky
 
-- #### Sčítačka 
 <table><tr>
+<td>Sčítačka</td>
 <td><img src="./doc/four_adder.svg" height="240"></td>
 <td>Numericky sečte hodnoty na vstupech A, B a výsledek uloží do Y. Příznak přenosu je uložen do C. Vstupní příznak přenosu C je ignorován.</td>
-</tr><table>
 
-- #### Odčítačka
-<table><tr>
+</tr><tr>
+<td>Odčítačka</td>
 <td><img src="./doc/substraction.svg" height="235"></td>
 <td>Numericky odečte hodnotu na vstupu B od vstupu A a výsledek uloží do Y. Příznak přenosu je uložen do C. Vstupní příznak přenosu C je ignorován.</td>
-</tr><table>
 
-- #### Inkrementace 
-<table><tr>
+</tr><tr>
+<td>Inkrementace</td>
 <td><img src="./doc/increment.svg" height="205"></td>
 <td>Numericky inkrementuje hodnotu na vstupu A o jedničku. Příznak přenosu je uložen do C. Vstupní příznak přenosu C je ignorován.</td>
-</tr><table>
 
-- #### Dekrementace 
-<table><tr>
+</tr><tr>
+<td>Dekrementace</td>
 <td><img src="./doc/decrement.svg" height="210"></td>
 <td>Numericky dekrementuje hodnotu na vstupu A o jedničku. Příznak přenosu je uložen do C. Vstupní příznak přenosu C je ignorován.</td>
-</tr><table>
 
-- #### Sčítačka s přenosem
-<table><tr>
+</tr><tr>
+<td>Sčítačka s přenosem</td>
 <td><img src="./doc/adder_with_carry.svg" height="250"></td>
 <td>Numericky sečte hodnoty na vstupech A, B a výsledek uloží do Y. Příznak přenosu je uložen do C. Vstupní příznak přenosu C je přičten k výsledku Y.</td>
-</tr><table>
 
-- #### Odčítačka s přenosem
-<table><tr>
+</tr><tr>
+<td>Odčítačka s přenosem</td>
 <td><img src="./doc/substraction_with_carry.svg" height="240"></td>
 <td>Numericky odečte hodnotu na vstupu B od vstupu A a výsledek uloží do Y. Příznak přenosu je uložen do C. Vstupní příznak přenosu C je odečten od výsledku Y.</td>
-</tr><table>
 
-- #### Logický součet 
-<table><tr>
+</tr><tr>
+<td>Logický součet</td> 
 <td><img src="./doc/disjunction.svg" height="205"></td>
 <td>Provede logický součet hodnot na vstupu A a B. Výsledek uloží do Y.</td>
-</tr><table>
 
-- #### Logický součin 
-<table><tr>
+</tr><tr>
+<td>Logický součin</td> 
 <td><img src="./doc/conjunction.svg" height="205"></td>
 <td>Provede logický součin hodnot na vstupu A a B. Výsledek uloží do Y</td>
-</tr><table>
 
-- #### Exkluzivní logický součet 
-<table><tr>
+</tr><tr>
+<td>Exkluzivní logický součet</td>
 <td><img src="./doc/exdisjunction.svg" height="205"></td>
 <td>Provede logický exkluzivní součet hodnot na vstupu A a B. Výsledek uloží do Y.</td>
-</tr><table>
 
-- #### Logická negace 
-<table><tr>
+</tr><tr>
+<td>Logická negace</td>
 <td><img src="./doc/negation.svg" height="170"></td>
 <td>Provede logickou negaci hodnoty na vstupu A. Výsledek uloží do Y.</td>
-</tr><table>
 
-- #### Rotace vpravo 
-<table><tr>
+</tr><tr>
+<td>Rotace vpravo</td>
 <td><img src="./doc/rotate_right.svg" height="205"></td>
 <td>Provede rotaci hodnoty na vstupu A o jeden bit vpravo. Výsledek uloží do Y. Nejnižší bit je uložen do C. Vstupní příznak C je ignorován.</td>
-</tr><table>
 
-- #### Rotace vlevo 
-<table><tr>
+</tr><tr>
+<td>Rotace vlevo</td>
 <td><img src="./doc/rotate_left.svg" height="210"></td>
 <td>Provede rotaci hodnoty na vstupu A o jeden bit vlevo. Výsledek uloží do Y. Nejvyšší bit je uložen do C. Vstupní příznak C je ignorován.</td>
-</tr><table>
 
-- #### Rotace vpravo s přenosem 
-<table><tr>
+</tr><tr>
+<td>Rotace vpravo s přenosem</td>
 <td><img src="./doc/rotate_right_with_carry.svg"  height="210"></td>
 <td>Provede rotaci hodnoty na vstupu A o jeden bit vpravo. Výsledek uloží do Y. Nejnižší bit je uložen do C. Vstupní příznak C je uložen na nejvyšší pozici.</td>
-</tr><table>
 
-- #### Rotace vlevo s přenosem 
-<table><tr>
+</tr><tr>
+<td>Rotace vlevo s přenosem</td>
 <td><img src="./doc/rotate_left_with_carry.svg"  height="210"></td>
 <td>Provede rotaci hodnoty na vstupu A o jeden bit vlevo. Výsledek uloží do Y.
 Nejvyšší bit je uložen do C. Vstupní příznak C je uložen na nejnižší pozici.</td>
-</tr><table>
 
-- #### Přehození bitů
-<table><tr>
+</tr><tr>
+<td>Přehození bitů</td>
 <td><img src="./doc/bitswap.svg"  height="170"></td>
 <td>Provede vzájemné přehození bitů na vstupu A. Výsledek uloží do Y. Shodné s rotací  vpravo nebo vlevo o dva bity.</td>
-</tr><table>
 
-- #### Násobička
-<table><tr>
+</tr><tr>
+<td>Násobička</td>
 <td><img src="./doc/multiply.svg"  height="220"></td>
 <td>Numericky vynásobí hodnotu na vstupu A s hodnotou na vstupu B. Výsledek uloží do Y. Příznak C signalizuje, že výsledek obsahuje numerickou hodnotu vyšší než 15. Na výstup Y jsou přivedeny vždy 4 nejnižší bity.</td>
-</tr><table>
 
-- #### Parita výsledku
-<table><tr>
+</tr><tr>
+<td>Parita výsledku</td>
 <td><img src="./doc/parity.svg"  height="170"></td>
 <td>Signalizuje lichý počet jedniček ve výsledku.</td>
-</tr><table>
 
-- #### Jednotka ovládání displeje
-<table><tr>
+</tr><tr>
+<td>Jednotka ovládání displeje</td>
 <td><img src="./doc/disp_mux.svg"  height="360"></td>
 <td>Řídí čtyřmístný sedmi-segmentový displej se společnou anodou. Segmenty displeje jsou aktivní v nule. Frekvence signálu clk musí být nejméně 10 kHz.</td>
-</tr><table>
 
-- #### Výsledná ALU jednotka
-<table><tr>
+</tr><tr>
+<td>Výsledná ALU jednotka</td>
 <td><img src="./doc/alu_unit.svg"  height="500"></td>
-<td>Celkové vstupy a výstupy jednotky.</td>
-</tr><table>
+<td>Celkové vstupy a výstupy jednotky.<br>
+Vstupy number_a a number_b slouží k nastavení čísel se kterými se budou provádět operace. Vstupem control_sig se nastavuje operace, kterou chceme provádět. Hodnoty se nastavují pomocí přepínačů.<br>
+Výstupy number_a, number_b, control_sig a alu_result slouží k binární reprezentaci hodnot, použity jsou LED diody. <br>
+Výstupy disp_digit a disp_sseg slouží k dekadickému zobrazení hodnot na 7segmentovém displeji. <br>
+</td>
+</tr></table>
 
 ## RTL schéma jednotky
 <table>
