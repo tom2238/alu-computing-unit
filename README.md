@@ -2,8 +2,22 @@
 
 ## Popis
 
-<p>4-bitová aritmeticko-logická jednotka se dvěma vstupy A a B a výstupem Y s přenosem C. Jednotka může provádět 16 různých operací (viz tabulka). </p><p>Jednotce lze ručně nastavit vstupní příznak carry, který je u některých operací použit. Výsledná data (včetně vstupů) jsou zobrazena na šestnácti LED diodách a také na čtyřmístném sedmisegmentovém displeji. Všechny vstupní hodnoty se nastavují pomocí přepínačů.</p><p> Vývoj probíhal na vývojové desce CoolRunner-II od firmy Digilent.
-<center><img src="./doc/cr2-2.png" height="400"></center><center>CoolRunner-II Starter Board [1]</center>
+<p>4-bitová aritmeticko-logická jednotka se dvěma vstupy A a B a výstupem Y s přenosem C. Jednotka může provádět 16 různých operací (viz tabulka). </p><p>Jednotce lze ručně nastavit vstupní příznak carry, který je u některých operací použit. Výsledná data (včetně vstupů) jsou zobrazena na šestnácti LED diodách a také na čtyřmístném sedmisegmentovém displeji. Všechny vstupní hodnoty se nastavují pomocí přepínačů, které jsou umístěny na externí rozšiřující desce společně s LED diodami.</p><p> Vývoj probíhal na vývojových deskách CoolRunner-II (CLPD) a Zybo (FPGA). Obě desky jsou od firmy Digilent.
+
+<p align="center"><img src="./doc/cr2-2.png" height="400"><br>CoolRunner-II Starter Board [1]</p>
+<p align="center"><img src="./doc/104431_fig3-digilent-zybo.png" height="400"><br> Zybo Zynq-7000 ARM/FPGA SoC Trainer Board [2]</p>
+<p align="center"><img src="./doc/ex_deska_m.jpg" height="300"><br> Rozšiřující deska s tlačítky, přepínači a LED diodami</p>
+</p>
+
+
+## Zadání
+ALU jednotka s vlastní sadou početních/logických/binárních operací, viz např. 74181
+
+## Zapojení
+<p align="center"><img src="./doc/popis_m.jpg" height="400"><br>Zapojení ALU jednotky s deskou Zybo
+<br>
+<table><td><img src="./doc/disp_mux.png" ></td><td><img src="./doc/sw_led.png"></td></table></p>
+<p align="center">Schéma externí hardware připojeného k desce Zybo. Vlevo displej, vpravo LED diody a přepínače.</p>
 
 ## Řídící signály ALU
 
@@ -130,6 +144,8 @@ Výstupy disp_digit a disp_sseg slouží k dekadickému zobrazení hodnot na 7se
 </td>
 </tr></table>
 
+<p>Některé části (disp_mux) jsou doplněné šablony od pana Frýzy [3].</p>
+
 ## RTL schéma jednotky
 <table>
 <tr><td>Celkové zjednodušené</td><td>Více podrobné</td>
@@ -140,3 +156,5 @@ Výstupy disp_digit a disp_sseg slouží k dekadickému zobrazení hodnot na 7se
 
 ### Zdroje
 1. https://reference.digilentinc.com/_media/reference/programmable-logic/coolrunner-ii/cr2-2.png
+2. https://www.electronicdesign.com/sites/electronicdesign.com/files/uploads/2014/03/104431_fig3-digilent-zybo.png
+3. https://gitlab.com/tomas.fryza/vhdl-examples
