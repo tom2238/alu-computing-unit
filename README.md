@@ -2,7 +2,7 @@
 
 ## Popis
 
-<p>4-bitová aritmeticko-logická jednotka se dvěma vstupy A a B a výstupem Y s přenosem C. Jednotka může provádět 16 různých operací (viz tabulka). </p><p>Jednotce lze ručně nastavit vstupní příznak carry, který je u některých operací použit. Výsledná data (včetně vstupů) jsou zobrazena na šestnácti LED diodách a také na čtyřmístném sedmisegmentovém displeji. Všechny vstupní hodnoty se nastavují pomocí přepínačů, které jsou umístěny na externí rozšiřující desce společně s LED diodami.</p><p> Vývoj probíhal na vývojových deskách CoolRunner-II (CLPD) a Zybo (FPGA). Obě desky jsou od firmy Digilent.
+<p>4-bitová aritmeticko-logická jednotka se dvěma vstupy A a B a výstupem Y s přenosem C. Jednotka může provádět 16 různých operací (viz tabulka). </p><p>Jednotce lze ručně nastavit vstupní příznak carry, který je u některých operací použit. Výsledná data (včetně vstupů) jsou zobrazena na šestnácti LED diodách a také na čtyřmístném sedmisegmentovém displeji. Všechny vstupní hodnoty se nastavují pomocí přepínačů, které jsou umístěny na externí rozšiřující desce společně s LED diodami.</p><p> Vývoj probíhal na vývojových deskách CoolRunner-II (CLPD) a Zybo (FPGA). Obě desky jsou od firmy Digilent. Program běží na obou deskách nezávisle, pouze na desce Zybo je nutné snížit vstupní hodinový kmitočet (na 10 kHz) a invertovat výstupy (carry, carry_in, parity).</p>
 
 <p align="center"><img src="./doc/cr2-2.png" height="400"><br>CoolRunner-II Starter Board [1]</p>
 <p align="center"><img src="./doc/104431_fig3-digilent-zybo.png" height="400"><br> Zybo Zynq-7000 ARM/FPGA SoC Trainer Board [2]</p>
@@ -17,7 +17,7 @@ ALU jednotka s vlastní sadou početních/logických/binárních operací, viz n
 <p align="center"><img src="./doc/popis_m.jpg" height="400"><br>Zapojení ALU jednotky s deskou Zybo
 <br>
 <table><td><img src="./doc/disp_mux.png" ></td><td><img src="./doc/sw_led.png"></td></table></p>
-<p align="center">Schéma externí hardware připojeného k desce Zybo. Vlevo displej, vpravo LED diody a přepínače.</p>
+<p align="center">Schéma externího hardware připojeného k desce Zybo. Vlevo displej, vpravo LED diody a přepínače.</p>
 
 ## Řídící signály ALU
 
