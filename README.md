@@ -154,6 +154,13 @@ Výstupy disp_digit a disp_sseg slouží k dekadickému zobrazení hodnot na 7se
 <td><a href="./doc/alu_schematic_expand.pdf"><img src="./doc/alu_schematic_expand.svg"  height="500"></a></td>
 </tr></table>
 
+### Video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d3AlJtHENpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Prezentace
+<a href="./doc/alu_jednotka.pdf">Prezentace ve formátu PDF</a>
+<a href="./doc/alu_jednotka.pptx">Prezentace ve formátu PPTX</a>
+
 ### Zdroje
 1. https://reference.digilentinc.com/_media/reference/programmable-logic/coolrunner-ii/cr2-2.png
 2. https://www.electronicdesign.com/sites/electronicdesign.com/files/uploads/2014/03/104431_fig3-digilent-zybo.png
