@@ -155,10 +155,10 @@ Výstupy disp_digit a disp_sseg slouží k dekadickému zobrazení hodnot na 7se
 </tr></table>
 
 ### Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/d3AlJtHENpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Alu jednotka](https://img.youtube.com/vi/d3AlJtHENpg/0.jpg)](https://www.youtube.com/watch?v=d3AlJtHENpg)
 
 ### Prezentace
-<a href="./doc/alu_jednotka.pdf">Prezentace ve formátu PDF</a>
+<a href="./doc/alu_jednotka.pdf">Prezentace ve formátu PDF</a><br>
 <a href="./doc/alu_jednotka.pptx">Prezentace ve formátu PPTX</a>
 
 ### Zdroje
